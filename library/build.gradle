@@ -24,11 +24,6 @@ android {
     }
 }
 
-repositories {
-    jcenter()
-    maven { url "https://dl.bintray.com/drummer-aidan/maven" }
-}
-
 dependencies {
     implementation 'com.android.support:appcompat-v7:' + versions.supportLib
     implementation 'com.afollestad.material-dialogs:core:' + versions.materialDialogs
