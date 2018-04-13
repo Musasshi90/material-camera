@@ -16,4 +16,7 @@
     <string name="mcam_image_preview_error_title">Image preview error</string>
     <string name="mcam_image_preview_error_message">Could not decode bitmap</string>
 
+    <string name="evp_submit">SUBMIT</string>
+    <string name="evp_retry">RETRY</string>
+
 </resources>

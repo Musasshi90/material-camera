@@ -8,6 +8,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:' + versions.gradlePlugin
+        classpath 'com.google.gms:google-services:' + versions.gradleService
         classpath "com.diffplug.spotless:spotless-plugin-gradle:" + versions.spotlessPlugin
     }
 }
@@ -15,11 +16,19 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
 
     buildscript {
         repositories {
             maven { url "https://plugins.gradle.org/m2/" }
+            maven {
+                url 'https://maven.google.com/'
+                name 'Google'
+            }
         }
     }
     apply plugin: "com.diffplug.gradle.spotless"

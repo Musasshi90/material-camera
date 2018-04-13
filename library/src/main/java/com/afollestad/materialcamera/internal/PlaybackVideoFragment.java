@@ -17,8 +17,7 @@ import com.afollestad.materialcamera.util.CameraUtil;
 import com.afollestad.materialdialogs.MaterialDialog;
 
 /** @author Aidan Follestad (afollestad) */
-public class PlaybackVideoFragment extends Fragment
-    implements CameraUriInterface, EasyVideoCallback {
+public class PlaybackVideoFragment extends Fragment implements CameraUriInterface, EasyVideoCallback {
 
   private EasyVideoPlayer mPlayer;
   private String mOutputUri;
@@ -181,5 +180,10 @@ public class PlaybackVideoFragment extends Fragment
   @Override
   public void onSubmit(EasyVideoPlayer player, Uri source) {
     useVideo();
+  }
+
+  @Override
+  public void onClickVideoFrame(EasyVideoPlayer player) {
+
   }
 }

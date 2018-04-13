@@ -30,6 +30,10 @@ repositories {
 }
 
 dependencies {
-    compile project(':library')
-    compile 'com.android.support:appcompat-v7:' + versions.supportLib
+    implementation(project(':library')) {
+        exclude group: 'com.android.support'
+        exclude module: 'appcompat-v7'
+        exclude module: 'recyclerview-v7'
+    }
+    implementation 'com.android.support:appcompat-v7:' + versions.supportLib
 }
